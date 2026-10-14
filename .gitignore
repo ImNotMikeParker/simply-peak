@@ -8,3 +8,4 @@ node_modules/
 assets/logo/*.html
 assets/preview/preview.js
 assets/preview/preview.html
+assets/marketplace/build/

@@ -9,6 +9,7 @@
     "watch": "rollup -c -w",
     "icons": "node scripts/make-icons.mjs && node scripts/make-logo.mjs",
     "logo": "node scripts/make-logo.mjs",
+    "marketing": "node scripts/make-marketing.mjs",
     "ui": "node scripts/make-ui.mjs",
     "deps": "cd com.mjp.simplypuffco.sdPlugin && npm install --omit=dev --no-audit --no-fund",
     "link": "streamdeck link com.mjp.simplypuffco.sdPlugin",
