@@ -30,10 +30,16 @@
       "Icon": "imgs/actions/profile/icon",
       "Tooltip": "One of the four heat profiles: name, temperature, time and colour. Press to select it (optionally start heating too). The active profile is outlined.",
       "PropertyInspectorPath": "ui/profile.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/profile/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/profile/key"
+        }
+      ]
     },
     {
       "Name": "Start / Stop",
@@ -41,10 +47,16 @@
       "Icon": "imgs/actions/heat/icon",
       "Tooltip": "Hold to start a session on the active profile; press to stop the one running. Shows live temperature and the countdown.",
       "PropertyInspectorPath": "ui/heat.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/heat/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/heat/key"
+        }
+      ]
     },
     {
       "Name": "Boost",
@@ -52,10 +64,16 @@
       "Icon": "imgs/actions/boost/icon",
       "Tooltip": "Boost the running session (extra time and temperature, as set in the profile).",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/boost/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/boost/key"
+        }
+      ]
     },
     {
       "Name": "Battery",
@@ -63,10 +81,16 @@
       "Icon": "imgs/actions/battery/icon",
       "Tooltip": "Battery level, charging state and sessions remaining. Press to flash the level on the device.",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": false,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/battery/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/battery/key"
+        }
+      ]
     },
     {
       "Name": "Lantern",
@@ -74,10 +98,16 @@
       "Icon": "imgs/actions/lantern/icon",
       "Tooltip": "Toggle lantern mode (the glass lights up with the profile colour).",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/lantern/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/lantern/key"
+        }
+      ]
     },
     {
       "Name": "Stealth",
@@ -85,10 +115,16 @@
       "Icon": "imgs/actions/stealth/icon",
       "Tooltip": "Toggle stealth mode (lights off).",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/stealth/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/stealth/key"
+        }
+      ]
     },
     {
       "Name": "Session Stats",
@@ -96,10 +132,16 @@
       "Icon": "imgs/actions/stats/icon",
       "Tooltip": "Lifetime session count, sessions per day, and how many the battery has left.",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": false,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/stats/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/stats/key"
+        }
+      ]
     },
     {
       "Name": "Sleep / Power Off",
@@ -107,10 +149,16 @@
       "Icon": "imgs/actions/power/icon",
       "Tooltip": "Hold to put the Peak to sleep or power it off (your choice in settings).",
       "PropertyInspectorPath": "ui/power.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": true,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/power/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/power/key"
+        }
+      ]
     },
     {
       "Name": "Connection",
@@ -118,10 +166,16 @@
       "Icon": "imgs/actions/status/icon",
       "Tooltip": "Bluetooth link state, device model and chamber. Press to reconnect. Holds the device and unit settings.",
       "PropertyInspectorPath": "ui/status.html",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": false,
       "UserTitleEnabled": false,
-      "States": [{ "Image": "imgs/actions/status/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/status/key"
+        }
+      ]
     },
     {
       "Name": "Session (Dial)",
@@ -129,7 +183,9 @@
       "Icon": "imgs/actions/session/icon",
       "Tooltip": "Stream Deck + dial: live temperature and countdown on the strip. Rotate to change the active profile's temperature, press to start / stop, tap to boost.",
       "PropertyInspectorPath": "ui/session.html",
-      "Controllers": ["Encoder"],
+      "Controllers": [
+        "Encoder"
+      ],
       "UserTitleEnabled": false,
       "Encoder": {
         "layout": "layouts/session.json",
@@ -141,7 +197,11 @@
           "Touch": "Boost"
         }
       },
-      "States": [{ "Image": "imgs/actions/session/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/session/key"
+        }
+      ]
     },
     {
       "Name": "Session Strip (Dial)",
@@ -149,7 +209,9 @@
       "Icon": "imgs/actions/strip/icon",
       "Tooltip": "Put this on all four dials: one bar across the whole touch strip that fills while heating and drains through the session. Rotate for temperature, press to start / stop, tap to boost.",
       "PropertyInspectorPath": "ui/strip.html",
-      "Controllers": ["Encoder"],
+      "Controllers": [
+        "Encoder"
+      ],
       "UserTitleEnabled": false,
       "Encoder": {
         "layout": "layouts/strip.json",
@@ -161,7 +223,11 @@
           "Touch": "Boost"
         }
       },
-      "States": [{ "Image": "imgs/actions/strip/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/strip/key"
+        }
+      ]
     },
     {
       "Name": "Brightness (Dial)",
@@ -169,7 +235,9 @@
       "Icon": "imgs/actions/brightness/icon",
       "Tooltip": "Stream Deck + dial: rotate to set the Peak's LED brightness, press to toggle stealth mode.",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Encoder"],
+      "Controllers": [
+        "Encoder"
+      ],
       "UserTitleEnabled": false,
       "Encoder": {
         "layout": "layouts/battery.json",
@@ -180,7 +248,11 @@
           "Push": "Stealth on / off"
         }
       },
-      "States": [{ "Image": "imgs/actions/brightness/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/brightness/key"
+        }
+      ]
     },
     {
       "Name": "Battery (Dial)",
@@ -188,7 +260,9 @@
       "Icon": "imgs/actions/battery/icon",
       "Tooltip": "Stream Deck + dial: battery level, charging and sessions remaining. Press to flash the level on the device.",
       "PropertyInspectorPath": "ui/simple.html",
-      "Controllers": ["Encoder"],
+      "Controllers": [
+        "Encoder"
+      ],
       "UserTitleEnabled": false,
       "Encoder": {
         "layout": "layouts/battery.json",
@@ -198,7 +272,11 @@
           "Push": "Show battery on device"
         }
       },
-      "States": [{ "Image": "imgs/actions/battery/key" }]
+      "States": [
+        {
+          "Image": "imgs/actions/battery/key"
+        }
+      ]
     }
   ]
 }
