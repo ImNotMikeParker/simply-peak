@@ -1,0 +1,7 @@
+node_modules/
+*.sdPlugin/bin/
+*.sdPlugin/logs/
+*.sdPlugin/node_modules/
+*.sdPlugin/package-lock.json
+*.streamDeckPlugin
+.DS_Store

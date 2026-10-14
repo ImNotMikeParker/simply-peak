@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <title>Simply Peak</title>
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  <link rel="stylesheet" href="common.css" />
+  <script src="common.js"></script>
+</head>
+<body>
+  <div id="status"></div>
+  <hr />
+  <sdpi-item label="Action">
+    <sdpi-select setting="mode" default="sleep">
+      <option value="sleep" selected>Sleep (wakes with the button)</option>
+      <option value="off">Power off</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Hold">
+    <sdpi-checkbox setting="hold" default="true" label="Hold for a moment instead of a single press"></sdpi-checkbox>
+  </sdpi-item>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <title>Simply Peak</title>
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  <link rel="stylesheet" href="common.css" />
+  <script src="common.js"></script>
+</head>
+<body>
+  <div id="status"></div>
+  <hr />
+  <sdpi-item label="Temperature">
+    <sdpi-select setting="unit" default="f" global>
+      <option value="f" selected>Fahrenheit</option>
+      <option value="c">Celsius</option>
+    </sdpi-select>
+  </sdpi-item>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <title>Simply Peak</title>
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  <link rel="stylesheet" href="common.css" />
+  <script src="common.js"></script>
+</head>
+<body>
+  <div id="status"></div>
+  <hr />
+  <sdpi-item label="Device name">
+    <sdpi-textfield setting="nameFilter" global placeholder="any Peak Pro"></sdpi-textfield>
+  </sdpi-item>
+  <sdpi-item label="Temperature">
+    <sdpi-select setting="unit" default="f" global>
+      <option value="f" selected>Fahrenheit</option>
+      <option value="c">Celsius</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="">
+    <button id="reconnect">Reconnect</button>
+  </sdpi-item>
+  <div class="sd-help">Leave the name empty to connect to the first Peak Pro found. If you renamed yours in the Puffco app, you can type part of that name here. The phone app must be disconnected: a Peak only talks to one controller at a time.</div>
+</body>
+</html>

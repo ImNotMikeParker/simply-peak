@@ -1,0 +1,41 @@
+{
+  "name": "simply-peak-streamdeck",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Simply Peak: control a Puffco Peak Pro from an Elgato Stream Deck over Bluetooth LE",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "icons": "node scripts/make-icons.mjs && node scripts/make-logo.mjs",
+    "logo": "node scripts/make-logo.mjs",
+    "ui": "node scripts/make-ui.mjs",
+    "deps": "cd com.mjp.simplypuffco.sdPlugin && npm install --omit=dev --no-audit --no-fund",
+    "link": "streamdeck link com.mjp.simplypuffco.sdPlugin",
+    "restart": "streamdeck restart com.mjp.simplypuffco",
+    "restart:force": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/restart-plugin.ps1",
+    "validate": "streamdeck validate com.mjp.simplypuffco.sdPlugin",
+    "pack": "streamdeck pack com.mjp.simplypuffco.sdPlugin --force",
+    "probe": "node scripts/probe.mjs"
+  },
+  "devDependencies": {
+    "@elgato/cli": "^1.10.0",
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "~24.1.0",
+    "rollup": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@elgato/streamdeck": "^3.0.0",
+    "@elgato/utils": "^0.6.0",
+    "@stoprocent/noble": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

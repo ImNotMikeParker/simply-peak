@@ -1,0 +1,204 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Simply Peak",
+  "Version": "0.2.0.0",
+  "Author": "Mike Parker",
+  "Description": "Stream Deck control for the Puffco Peak Pro over Bluetooth: profile keys with live temperature and colour, hold-to-start sessions, boost, battery, lantern and stealth, and a full-width session bar on the Stream Deck + touch strip. Firmware X or later. For adults 21+. Not affiliated with Puffco.",
+  "Category": "Simply Peak",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "Icon": "imgs/plugin/marketplace",
+  "CodePath": "bin/plugin.js",
+  "UUID": "com.mjp.simplypuffco",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "24",
+    "Debug": "enabled"
+  },
+  "Actions": [
+    {
+      "Name": "Profile",
+      "UUID": "com.mjp.simplypuffco.profile",
+      "Icon": "imgs/actions/profile/icon",
+      "Tooltip": "One of the four heat profiles: name, temperature, time and colour. Press to select it (optionally start heating too). The active profile is outlined.",
+      "PropertyInspectorPath": "ui/profile.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/profile/key" }]
+    },
+    {
+      "Name": "Start / Stop",
+      "UUID": "com.mjp.simplypuffco.heat",
+      "Icon": "imgs/actions/heat/icon",
+      "Tooltip": "Hold to start a session on the active profile; press to stop the one running. Shows live temperature and the countdown.",
+      "PropertyInspectorPath": "ui/heat.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/heat/key" }]
+    },
+    {
+      "Name": "Boost",
+      "UUID": "com.mjp.simplypuffco.boost",
+      "Icon": "imgs/actions/boost/icon",
+      "Tooltip": "Boost the running session (extra time and temperature, as set in the profile).",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/boost/key" }]
+    },
+    {
+      "Name": "Battery",
+      "UUID": "com.mjp.simplypuffco.battery",
+      "Icon": "imgs/actions/battery/icon",
+      "Tooltip": "Battery level, charging state and sessions remaining. Press to flash the level on the device.",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/battery/key" }]
+    },
+    {
+      "Name": "Lantern",
+      "UUID": "com.mjp.simplypuffco.lantern",
+      "Icon": "imgs/actions/lantern/icon",
+      "Tooltip": "Toggle lantern mode (the glass lights up with the profile colour).",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/lantern/key" }]
+    },
+    {
+      "Name": "Stealth",
+      "UUID": "com.mjp.simplypuffco.stealth",
+      "Icon": "imgs/actions/stealth/icon",
+      "Tooltip": "Toggle stealth mode (lights off).",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/stealth/key" }]
+    },
+    {
+      "Name": "Session Stats",
+      "UUID": "com.mjp.simplypuffco.stats",
+      "Icon": "imgs/actions/stats/icon",
+      "Tooltip": "Lifetime session count, sessions per day, and how many the battery has left.",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/stats/key" }]
+    },
+    {
+      "Name": "Sleep / Power Off",
+      "UUID": "com.mjp.simplypuffco.power",
+      "Icon": "imgs/actions/power/icon",
+      "Tooltip": "Hold to put the Peak to sleep or power it off (your choice in settings).",
+      "PropertyInspectorPath": "ui/power.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/power/key" }]
+    },
+    {
+      "Name": "Connection",
+      "UUID": "com.mjp.simplypuffco.status",
+      "Icon": "imgs/actions/status/icon",
+      "Tooltip": "Bluetooth link state, device model and chamber. Press to reconnect. Holds the device and unit settings.",
+      "PropertyInspectorPath": "ui/status.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": false,
+      "UserTitleEnabled": false,
+      "States": [{ "Image": "imgs/actions/status/key" }]
+    },
+    {
+      "Name": "Session (Dial)",
+      "UUID": "com.mjp.simplypuffco.dial-session",
+      "Icon": "imgs/actions/session/icon",
+      "Tooltip": "Stream Deck + dial: live temperature and countdown on the strip. Rotate to change the active profile's temperature, press to start / stop, tap to boost.",
+      "PropertyInspectorPath": "ui/session.html",
+      "Controllers": ["Encoder"],
+      "UserTitleEnabled": false,
+      "Encoder": {
+        "layout": "layouts/session.json",
+        "Icon": "imgs/actions/session/icon",
+        "StackColor": "#ff7a1a",
+        "TriggerDescription": {
+          "Rotate": "Profile temperature",
+          "Push": "Start / stop",
+          "Touch": "Boost"
+        }
+      },
+      "States": [{ "Image": "imgs/actions/session/key" }]
+    },
+    {
+      "Name": "Session Strip (Dial)",
+      "UUID": "com.mjp.simplypuffco.dial-strip",
+      "Icon": "imgs/actions/strip/icon",
+      "Tooltip": "Put this on all four dials: one bar across the whole touch strip that fills while heating and drains through the session. Rotate for temperature, press to start / stop, tap to boost.",
+      "PropertyInspectorPath": "ui/strip.html",
+      "Controllers": ["Encoder"],
+      "UserTitleEnabled": false,
+      "Encoder": {
+        "layout": "layouts/strip.json",
+        "Icon": "imgs/actions/strip/icon",
+        "StackColor": "#ff7a1a",
+        "TriggerDescription": {
+          "Rotate": "Profile temperature",
+          "Push": "Start / stop",
+          "Touch": "Boost"
+        }
+      },
+      "States": [{ "Image": "imgs/actions/strip/key" }]
+    },
+    {
+      "Name": "Brightness (Dial)",
+      "UUID": "com.mjp.simplypuffco.dial-brightness",
+      "Icon": "imgs/actions/brightness/icon",
+      "Tooltip": "Stream Deck + dial: rotate to set the Peak's LED brightness, press to toggle stealth mode.",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Encoder"],
+      "UserTitleEnabled": false,
+      "Encoder": {
+        "layout": "layouts/battery.json",
+        "Icon": "imgs/actions/brightness/icon",
+        "StackColor": "#ffc53d",
+        "TriggerDescription": {
+          "Rotate": "LED brightness",
+          "Push": "Stealth on / off"
+        }
+      },
+      "States": [{ "Image": "imgs/actions/brightness/key" }]
+    },
+    {
+      "Name": "Battery (Dial)",
+      "UUID": "com.mjp.simplypuffco.dial-battery",
+      "Icon": "imgs/actions/battery/icon",
+      "Tooltip": "Stream Deck + dial: battery level, charging and sessions remaining. Press to flash the level on the device.",
+      "PropertyInspectorPath": "ui/simple.html",
+      "Controllers": ["Encoder"],
+      "UserTitleEnabled": false,
+      "Encoder": {
+        "layout": "layouts/battery.json",
+        "Icon": "imgs/actions/battery/icon",
+        "StackColor": "#3ad47e",
+        "TriggerDescription": {
+          "Push": "Show battery on device"
+        }
+      },
+      "States": [{ "Image": "imgs/actions/battery/key" }]
+    }
+  ]
+}

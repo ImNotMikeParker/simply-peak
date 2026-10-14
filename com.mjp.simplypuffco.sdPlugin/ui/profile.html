@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <title>Simply Peak</title>
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  <link rel="stylesheet" href="common.css" />
+  <script src="common.js"></script>
+</head>
+<body>
+  <div id="status"></div>
+  <hr />
+  <sdpi-item label="Profile">
+    <sdpi-select setting="slot" default="1">
+      <option value="1" selected>Profile 1</option>
+      <option value="2">Profile 2</option>
+      <option value="3">Profile 3</option>
+      <option value="4">Profile 4</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="On press">
+    <sdpi-select setting="press" default="select">
+      <option value="select" selected>Select the profile</option>
+      <option value="select-start">Select and start heating</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Temperature">
+    <sdpi-select setting="unit" default="f" global>
+      <option value="f" selected>Fahrenheit</option>
+      <option value="c">Celsius</option>
+    </sdpi-select>
+  </sdpi-item>
+  <div class="sd-help">Put four Profile keys side by side. The active profile is outlined; while heating, the outline follows the session colour.</div>
+</body>
+</html>

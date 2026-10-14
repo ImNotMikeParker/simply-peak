@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <title>Simply Peak</title>
+  <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  <link rel="stylesheet" href="common.css" />
+  <script src="common.js"></script>
+</head>
+<body>
+  <div id="status"></div>
+  <hr />
+  <sdpi-item label="Segment">
+    <sdpi-select setting="segment" default="auto">
+      <option value="auto" selected>Automatic (by dial position)</option>
+      <option value="1">1 (left)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4 (right)</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Rotate">
+    <sdpi-select setting="rotate" default="temp">
+      <option value="temp" selected>Profile temperature</option>
+      <option value="time">Profile time</option>
+      <option value="profile">Switch profile</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Temperature step">
+    <sdpi-select setting="step" default="5">
+      <option value="1">1°</option>
+      <option value="5" selected>5°</option>
+      <option value="10">10°</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Touch tap">
+    <sdpi-select setting="tap" default="boost">
+      <option value="boost" selected>Boost</option>
+      <option value="none">Nothing</option>
+    </sdpi-select>
+  </sdpi-item>
+  <sdpi-item label="Start">
+    <sdpi-checkbox setting="hold" default="true" label="Hold for a moment to start (a press still stops instantly)"></sdpi-checkbox>
+  </sdpi-item>
+  <sdpi-item label="Temperature">
+    <sdpi-select setting="unit" default="f" global>
+      <option value="f" selected>Fahrenheit</option>
+      <option value="c">Celsius</option>
+    </sdpi-select>
+  </sdpi-item>
+  <div class="sd-help">Drop this action on all four dials. Each one draws its quarter of a single bar across the strip, picked from its position automatically.</div>
+</body>
+</html>
