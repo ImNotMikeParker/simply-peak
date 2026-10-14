@@ -5,3 +5,6 @@ node_modules/
 *.sdPlugin/package-lock.json
 *.streamDeckPlugin
 .DS_Store
+assets/logo/*.html
+assets/preview/preview.js
+assets/preview/preview.html
