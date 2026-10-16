@@ -31,4 +31,4 @@ own scripts, not by AI image tools.
 
 **Links:** Source: https://github.com/ImNotMikeParker/simply-peak
 
-**Screenshots to include:** the deck photo (profiles + strip), `assets/preview/preview.png`, the Session Strip mid-session.
+**Media:** `assets/marketplace/thumbnail.png` and `gallery-1.png` to `gallery-4.png` (1920 x 960, from `npm run marketing`); see `docs/RESUBMIT.md` for how they meet the gallery guidelines.
